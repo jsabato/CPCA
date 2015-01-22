@@ -1,0 +1,13 @@
+<div id="myModalAdd" class="reveal-modal small" data-reveal>
+  <%= form_for "student", url: students_path, :method=> :post, html: {class: "signup"} do |f|%>
+
+    <%= f.label :first_name  %>
+    <%= f.text_field :first_name, class: "form-control", placeholder: "First Name Goes Here" %>
+    <br>
+    <%= f.label :last_name  %>
+    <%= f.password_field :last_name, class: "form-control", placeholder: "Last Name Goes Here" %>
+    <br>
+    <a href="#"><%= f.submit :Add, class: "button expand" %></a>
+  <% end %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

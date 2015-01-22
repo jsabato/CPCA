@@ -1,0 +1,20 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <% if session[:current_user_id] == nil %>
+      <li><a href="#" class="nav-button" id="signIn" data-reveal-id="myModalIn">Sign In</a></li>
+      <li><a href="#" class="nav-button" id="signUp" data-reveal-id="myModalUp">Sign Up</a></li>
+      <% else %>
+      <li><%= link_to :SignOut, sessions_path, :method => :delete, class: "nav-button" %></li>
+      <li><a href="#" class="nav-button" id="students" data-reveal-id="myModalStudents">Students</a></li>
+      <li><a href="#" class="nav-button" id="addStudent" data-reveal-id="myModalAdd">Add Student</a></li>
+      <% end %>
+    </ul>
+  </section>
+</ul>
+
+</nav>
+

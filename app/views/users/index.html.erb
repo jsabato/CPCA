@@ -1,0 +1,7 @@
+<%= render "sign_in" %>
+<%= render "shared/nav" %>
+<%= render "sign_up" %>
+<% if session[:current_user_id] != nil %>
+<%= render "students" %>
+<%= render "students/add_student" %>
+<%end%>

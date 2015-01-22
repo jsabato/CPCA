@@ -1,0 +1,12 @@
+<div id="myModalStudents" class="reveal-modal" data-reveal>
+  <% if session[:current_user_id] != nil %>
+    <% @user_id = session[:current_user_id] %>
+    <% @user = User.find(@user_id) %>
+    <% @students = @user.students %>
+    <% @students.each do |s| %>
+      <%=link_to "#{s.first_name}, #{s.last_name}", student_path(s.id)%>
+      <br>
+    <% end %>
+  <%end%>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
